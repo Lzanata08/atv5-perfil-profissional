@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #0077cc;
+  --cor-secundaria: #f0f0f0;
+  --cor-texto: #333;
+  --fonte-principal: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: var(--cor-primaria);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.foto-perfil {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Navegação */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  margin: 20px 0;
+}
+
+nav a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Layout principal */
+main {
+  display: grid;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+article::after {
+  content: " ✨";
+  color: gold;
+}
+
+aside {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header, section, aside {
+    text-align: center;
+  }
+}
+
